@@ -13,7 +13,7 @@ import (
 const filename = "config.json"
 
 type Config struct {
-	SlackAPIToken string `envconfig:"slack_api_token" required:"true" json:"-"`
+	SlackAPIToken string `envconfig:"slack_api_token" json:"slackApiToken"`
 	LastURL       string `json:"lastUrl,omitempty"`
 }
 
