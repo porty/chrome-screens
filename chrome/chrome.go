@@ -56,7 +56,7 @@ func (c *Chrome) stop() error {
 
 func (c *Chrome) start() error {
 
-	cmd := exec.Command(c.executable, "--disable-infobars", "--disable-translate", "--kiosk", "--temp-profile", c.url)
+	cmd := exec.Command(c.executable, "--disable-infobars", "--disable-translate", "--kiosk", "--temp-profile", "--password-store=basic", c.url)
 	writer := PrefixWriter{
 		prefix: "CHROME: ",
 		writer: os.Stdout,
